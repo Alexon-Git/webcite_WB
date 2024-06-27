@@ -110,36 +110,36 @@ import './index.css';
           console.log(err);
         }
       },
-      async createUser(id, username) {
-        try {
-          const option = {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ id: id, username: username }),
-          };
-          const res = await fetch(`${baseURL}createUser.php`, option).then(res => res.json());
-          return res;
-        } catch (err) {
-          console.log(err);
-        }
-      },
-      async getProducts() {
-        try {
-          const option = {
-            method: 'GET',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          };
-          const res = await fetch(`${baseURL}getProducts.php`, option).then(res => res.json());
-          return res;
-        } catch (err) {
-          console.log(err);
-        }
-      },
-    };
+    //   async createUser(id, username) {
+    //     try {
+    //       const option = {
+    //         method: 'POST',
+    //         headers: {
+    //           'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify({ id: id, username: username }),
+    //       };
+    //       const res = await fetch(`${baseURL}createUser.php`, option).then(res => res.json());
+    //       return res;
+    //     } catch (err) {
+    //       console.log(err);
+    //     }
+    //   },
+    //   async getProducts() {
+    //     try {
+    //       const option = {
+    //         method: 'GET',
+    //         headers: {
+    //           'Content-Type': 'application/json',
+    //         },
+    //       };
+    //       const res = await fetch(`${baseURL}getProducts.php`, option).then(res => res.json());
+    //       return res;
+    //     } catch (err) {
+    //       console.log(err);
+    //     }
+    //   },
+    // };
   
     const fetchProducts = async () => {
       try {
