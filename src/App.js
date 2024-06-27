@@ -90,26 +90,26 @@ import './index.css';
   //     category: "Мужчинам"
   //   },
   // ]);
-    const categories = ['Женщинам', 'Мужчинам', 'Обувь', 'Детям', 'Дом', 'Новый год'];
-    const [userInfo, setUserInfo] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-    const baseURL = 'https://nilurl.ru:8000/';
+    // const categories = ['Женщинам', 'Мужчинам', 'Обувь', 'Детям', 'Дом', 'Новый год'];
+    // const [userInfo, setUserInfo] = useState(null);
+    // const [isLoading, setIsLoading] = useState(true);
+    // const baseURL = 'https://nilurl.ru:8000/';
   
-    const API = {
-      async getUser(id) {
-        try {
-          const option = {
-            method: 'GET',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          };
-          const res = await fetch(`${baseURL}getUser.php?id=${id}`, option).then(res => res.json());
-          return res;
-        } catch (err) {
-          console.log(err);
-        }
-      },
+    // const API = {
+    //   async getUser(id) {
+    //     try {
+    //       const option = {
+    //         method: 'GET',
+    //         headers: {
+    //           'Content-Type': 'application/json',
+    //         },
+    //       };
+    //       const res = await fetch(`${baseURL}getUser.php?id=${id}`, option).then(res => res.json());
+    //       return res;
+    //     } catch (err) {
+    //       console.log(err);
+    //     }
+    //   },
     //   async createUser(id, username) {
     //     try {
     //       const option = {
@@ -141,45 +141,45 @@ import './index.css';
     //   },
      };
   
-    const fetchProducts = async () => {
-      try {
-        const response = await API.getProducts();
-        if (response.success) {
-          // Прошла успешная загрузка продуктов
-          setProducts(response.data); // Устанавливаем продукты в состояние компонента
-        } else {
-          console.error('Failed to fetch products:', response.error);
-        }
-      } catch (error) {
-        console.error('Error fetching products:', error);
-      }
-    };
+    // const fetchProducts = async () => {
+    //   try {
+    //     const response = await API.getProducts();
+    //     if (response.success) {
+    //       // Прошла успешная загрузка продуктов
+    //       setProducts(response.data); // Устанавливаем продукты в состояние компонента
+    //     } else {
+    //       console.error('Failed to fetch products:', response.error);
+    //     }
+    //   } catch (error) {
+    //     console.error('Error fetching products:', error);
+    //   }
+    // };
   
-    useEffect(() => {
-      window.Telegram.WebApp.expand();
+    // useEffect(() => {
+    //   window.Telegram.WebApp.expand();
   
-      const fetchData = async () => {
-        try {
-          const userId = window.Telegram.WebApp.initDataUnsafe.user.id;
-          const username = window.Telegram.WebApp.initDataUnsafe.user.username;
-          const response = await API.getUser(userId);
-          if (!response.success) {
-            const createResponse = await API.createUser(userId, username);
-            if (createResponse.success === true) {
-              const newUserResponse = await API.getUser(userId);
-              setUserInfo(newUserResponse.data);
-              fetchProducts();
-              setIsLoading(false);
-            }
-          } else {
-            setUserInfo(response.data);
-            fetchProducts();
-            setIsLoading(false);
-          }
-        } catch (e) {
-          console.log(e);
-        }
-      };
+    //   const fetchData = async () => {
+    //     try {
+    //       const userId = window.Telegram.WebApp.initDataUnsafe.user.id;
+    //       const username = window.Telegram.WebApp.initDataUnsafe.user.username;
+    //       const response = await API.getUser(userId);
+    //       if (!response.success) {
+    //         const createResponse = await API.createUser(userId, username);
+    //         if (createResponse.success === true) {
+    //           const newUserResponse = await API.getUser(userId);
+    //           setUserInfo(newUserResponse.data);
+    //           fetchProducts();
+    //           setIsLoading(false);
+    //         }
+    //       } else {
+    //         setUserInfo(response.data);
+    //         fetchProducts();
+    //         setIsLoading(false);
+    //       }
+    //     } catch (e) {
+    //       console.log(e);
+    //     }
+    //   };
   
       fetchData();
     }, []);
