@@ -139,7 +139,7 @@ import './index.css';
     //       console.log(err);
     //     }
     //   },
-    // };
+     };
   
     const fetchProducts = async () => {
       try {
