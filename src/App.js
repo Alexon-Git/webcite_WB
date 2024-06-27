@@ -90,10 +90,10 @@ import './index.css';
   //     category: "Мужчинам"
   //   },
   // ]);
-    // const categories = ['Женщинам', 'Мужчинам', 'Обувь', 'Детям', 'Дом', 'Новый год'];
-    // const [userInfo, setUserInfo] = useState(null);
-    // const [isLoading, setIsLoading] = useState(true);
-    // const baseURL = 'https://nilurl.ru:8000/';
+    const categories = ['Женщинам', 'Мужчинам', 'Обувь', 'Детям', 'Дом', 'Новый год'];
+    const [userInfo, setUserInfo] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const baseURL = 'https://nilurl.ru:8000/';
   
     // const API = {
     //   async getUser(id) {
