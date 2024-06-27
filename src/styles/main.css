@@ -1,0 +1,37 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 568px;
+  position: relative;
+}
+
+.content {
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 50px; 
+}
+
+.content::-webkit-scrollbar {
+  width: 0px; 
+  height: 0px;
+}
+
+.content {
+  scrollbar-width: none;
+}
+
+.content {
+  -ms-overflow-style: none; 
+}
+
+
+
+/* Home Page */
+.home-page {
+  padding: 20px;
+  width: 100%;
+}
+
+
+

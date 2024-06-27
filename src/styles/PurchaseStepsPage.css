@@ -1,0 +1,265 @@
+.purchase-step-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  height: 100%;
+  background-color: #000000;
+  font-family: "Helvetica Neue Cyr", sans-serif;
+  box-sizing: border-box;
+}
+
+.purchase-step-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 320px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 0px 0px 8px 8px;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+.purchase-step-content {
+  width: 100%;
+  padding: 20px;
+  margin-top: 5px;
+  background-color: white;
+  border-radius: 8px 8px 0 0;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.purchase-step-content > * {
+  margin-bottom: 20px;
+}
+
+.purchase-step-content > *:last-child {
+  margin-bottom: 0;
+}
+
+.purchase-step-title {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+  margin: 0;
+}
+
+.purchase-step-subtitle {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.purchase-step-subtitle-12px-400 {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.purchase-step-warning {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.purchase-step-text {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.purchase-step-prices {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.purchase-step-prices > * {
+  margin-bottom: 10px;
+}
+
+.purchase-step-prices > *:last-child {
+  margin-bottom: 0;
+}
+
+.purchase-step-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+  margin-top: auto;
+}
+
+.purchase-step-button {
+  height: 30px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(105, 13, 201, 1);
+  color: rgba(255, 255, 255, 1);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+}
+
+.purchase-step-keywords {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.keyword {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(105, 13, 201, 1);
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  padding: 0 10px;
+  margin-right: 10px;
+  white-space: nowrap;
+  gap: 10px;
+}
+
+.text-ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.upload-label {
+  font-size: 8px;
+  font-weight: 400;
+  width: 280px;
+  border-radius: 8px;
+  background-color: rgba(188, 122, 255, 1);
+  color: white;
+  padding: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: inline-block;
+  border: none;
+}
+
+.upload-input {
+  display: none;
+  font-size: 8px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.upload-feedback {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.upload-checkbox {
+  width: 13px;
+  height: 13px;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.upload-checkbox.checked {
+  background-color: rgba(4, 184, 0, 1); /* Green when checked */
+}
+
+.upload-checkbox svg {
+  width: 10px;
+  height: 10px;
+  fill: black;
+}
+
+.upload-feedback-text {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.purchase-step-button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.image-uploaded-message {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.upload-title {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.purchase-step-skeleton {
+  background-color: #e0e0e0;
+  width: 100%;
+  height: 363px;
+  border-radius: 8px;
+  animation: skeleton-loading 1.5s infinite;
+  margin: 0 auto;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #f0f0f0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}
+
+.purchase-step-detail {
+  width: 100%;
+  height: 363px;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+.important {
+  color: red;
+}
+
+.red-error {
+  position: absolute;
+  top: -10px; /* Adjust as necessary */
+  left: 0;
+  color: red;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.article-input {
+  position: relative;
+  margin-top: 20px;
+}
+
+.purchase-step-page input {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(188, 122, 255, 1);
+  color: white;
+  font-size: 8px;
+  font-weight: 400;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.purchase-step-page input::placeholder {
+  color: white;
+}
